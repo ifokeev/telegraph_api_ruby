@@ -1,0 +1,6 @@
+require_relative 'types/core'
+require_relative 'types/account'
+require_relative 'types/node'
+require_relative 'types/page'
+require_relative 'types/page_list'
+require_relative 'types/page_views'
