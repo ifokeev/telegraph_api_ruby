@@ -46,7 +46,21 @@ result = TelegraphApi::Client.create_page(data)
 result.url
 ```
 
+See [tests](https://github.com/ifokeev/telegraph_api_ruby/blob/master/test/test_telegraph_api.rb) also.
+
 ## Methods
+
+See [Available methods](https://github.com/ifokeev/telegraph_api_ruby/blob/master/lib/telegraph_api_ruby/client.rb#L9-L19) and [Types](https://github.com/ifokeev/telegraph_api_ruby/tree/master/lib/telegraph_api_ruby/types).
+
+You are able to call any method described on telegra.ph/api page right forward: 
+
+```
+TelegraphApi::Client.getAccountInfo(access_token: 'TOKEN')
+
+```
+
+Because this gem uses [method_missing](https://ruby-doc.org/core-2.1.0/BasicObject.html#method-i-method_missing<Paste>) for unlisted in 
+[Available methods](https://github.com/ifokeev/telegraph_api_ruby/blob/master/lib/telegraph_api_ruby/client.rb#L9-L19) list.
 
 ## Contributing
 
