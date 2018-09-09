@@ -23,8 +23,8 @@ module TelegraphApi
       Request.call(path, *args, REQUEST_RESPONSE[method.to_sym])
     end
 
-    def self.respond_to_missing?(*)
-      super
+    def self.respond_to_missing?(method, include_all = false)
+      REQUEST_RESPONSE[method.to_sym] || super
     end
   end
 end

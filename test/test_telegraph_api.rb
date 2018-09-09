@@ -26,6 +26,18 @@ class TestTelegraphApi < Minitest::Test
     refute_nil result.url, 'Url is nil'
   end
 
+  def test_method_missing
+    result = create_account
+
+    data = {
+      access_token: result.access_token
+    }
+
+    result = TelegraphApi::Client.getAccountInfo(data)
+
+    assert_equal result[:short_name], 'test'
+  end
+
   private
 
   def create_account
